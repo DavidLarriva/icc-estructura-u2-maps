@@ -42,10 +42,26 @@ public class EmpleadoContoller {
         }
     }
 
+    //El entryset nos da todos los valores del mapa pero no duplicados
+
     public void displayEmpleadosSoloNombres() {
         for(Map.Entry<Integer, Empleado> empleadoEntry : empleados.entrySet()) {
             System.out.println(empleadoEntry.getValue().getName());
 
+        }
+    }
+
+    public void displayLlaves() {
+        for(Integer llave : empleados.keySet()) {
+            System.out.println(llave);
+            
+
+        }
+    }
+
+    public void displayEmpleadosSinEntrySet() {
+        for(Empleado nombres : empleados.values()) {
+            System.out.println(nombres);
         }
     }
 }
